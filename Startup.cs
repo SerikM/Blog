@@ -21,6 +21,7 @@ namespace BlogReact
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -43,11 +44,13 @@ namespace BlogReact
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+           
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");

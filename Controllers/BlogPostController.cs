@@ -9,29 +9,29 @@ namespace BlogReact.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class BlogPostController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static readonly string[] BlogTopics= new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<BlogPostController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public BlogPostController(ILogger<BlogPostController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<BlogPostModel> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new BlogPostModel
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                Topic = BlogTopics[rng.Next(BlogTopics.Length)], 
+                Contnet = "some dummy content"
             })
             .ToArray();
         }

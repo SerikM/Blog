@@ -631,11 +631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\gitrepos\\Blog\\BlogReact.csproj",
+      "projectUniqueName": "C:\\gitrepos\\Blog\\UI\\BlogReact.csproj",
       "projectName": "BlogReact",
-      "projectPath": "C:\\gitrepos\\Blog\\BlogReact.csproj",
+      "projectPath": "C:\\gitrepos\\Blog\\UI\\BlogReact.csproj",
       "packagesPath": "C:\\Users\\sergei\\.nuget\\packages\\",
-      "outputPath": "C:\\gitrepos\\Blog\\obj\\",
+      "outputPath": "C:\\gitrepos\\Blog\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
