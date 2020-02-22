@@ -14,14 +14,16 @@ COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1809 AS build
 COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
 WORKDIR /src
-COPY ["BlogReact.csproj", ""]
-RUN dotnet restore "./BlogReact.csproj"
+COPY ["./UI/BlogReact.csproj", "./UI/"]
+COPY ["./Data/Data.csproj", "./Data/"]
+RUN dotnet restore "./UI/BlogReact.csproj"
+
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "BlogReact.csproj" -c Release -o /app/build
+RUN dotnet build "./UI/BlogReact.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "BlogReact.csproj" -c Release -o /app/publish
+RUN dotnet publish "./UI/BlogReact.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
