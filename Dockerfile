@@ -7,7 +7,7 @@ RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/d
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 40011
 EXPOSE 443
 COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
 
