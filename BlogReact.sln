@@ -1,0 +1,138 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogReact", "UI\BlogReact.csproj", "{69FECDF2-D4CA-4948-B42D-62DDD6519324}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{0CCE0747-A0B3-47B3-B4F2-C4D7888A587B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A906389-A1BA-423E-B06A-895DE871CA85}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		Dockerfile = Dockerfile
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{FE583AAD-8B1A-48E2-8E76-44590A277389}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\.eslintrc.json = ClientApp\.eslintrc.json
+		ClientApp\.gitignore = ClientApp\.gitignore
+		ClientApp\package-lock.json = ClientApp\package-lock.json
+		ClientApp\package.json = ClientApp\package.json
+		ClientApp\README.md = ClientApp\README.md
+		ClientApp\tsconfig.json = ClientApp\tsconfig.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{1C856117-A05D-455A-AD2D-AA82990A54AE}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\build\asset-manifest.json = ClientApp\build\asset-manifest.json
+		ClientApp\build\favicon.ico = ClientApp\build\favicon.ico
+		ClientApp\build\index.html = ClientApp\build\index.html
+		ClientApp\build\manifest.json = ClientApp\build\manifest.json
+		ClientApp\build\precache-manifest.f5e8472153934cae52bf80c485498e01.js = ClientApp\build\precache-manifest.f5e8472153934cae52bf80c485498e01.js
+		ClientApp\build\service-worker.js = ClientApp\build\service-worker.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "static", "static", "{EFB53A79-BF11-4FA9-8A54-0B6018B98371}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{5AEA7259-70D8-4F44-ABD8-D2408F331C2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{E5DF3305-744D-4DF4-A590-BA47107C2E14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{8D1C3926-7673-4749-B591-2F7EB5D0BBEA}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\config\env.js = ClientApp\config\env.js
+		ClientApp\config\getHttpsConfig.js = ClientApp\config\getHttpsConfig.js
+		ClientApp\config\modules.js = ClientApp\config\modules.js
+		ClientApp\config\paths.js = ClientApp\config\paths.js
+		ClientApp\config\pnpTs.js = ClientApp\config\pnpTs.js
+		ClientApp\config\webpack.config.js = ClientApp\config\webpack.config.js
+		ClientApp\config\webpackDevServer.config.js = ClientApp\config\webpackDevServer.config.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE1FE434-10E3-41B0-926C-801674896503}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\src\App.test.tsx = ClientApp\src\App.test.tsx
+		ClientApp\src\App.tsx = ClientApp\src\App.tsx
+		ClientApp\src\custom.css = ClientApp\src\custom.css
+		ClientApp\src\index.tsx = ClientApp\src\index.tsx
+		ClientApp\src\react-app-env.d.ts = ClientApp\src\react-app-env.d.ts
+		ClientApp\src\registerServiceWorker.ts = ClientApp\src\registerServiceWorker.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{96E647C3-0B0D-4F5C-B6C2-7F3107D5ADFC}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\scripts\build.js = ClientApp\scripts\build.js
+		ClientApp\scripts\start.js = ClientApp\scripts\start.js
+		ClientApp\scripts\test.js = ClientApp\scripts\test.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{833A4F10-B294-453F-83FF-C42496076EC1}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\public\favicon.ico = ClientApp\public\favicon.ico
+		ClientApp\public\index.html = ClientApp\public\index.html
+		ClientApp\public\manifest.json = ClientApp\public\manifest.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "store", "store", "{639D0FD2-93FA-40D3-BEC2-098B036659D4}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\src\store\BlogPosts.ts = ClientApp\src\store\BlogPosts.ts
+		ClientApp\src\store\configureStore.ts = ClientApp\src\store\configureStore.ts
+		ClientApp\src\store\index.ts = ClientApp\src\store\index.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{727CE733-5D2C-4871-BD4B-C55BD127C5F3}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\src\components\About.tsx = ClientApp\src\components\About.tsx
+		ClientApp\src\components\BlogPosts.tsx = ClientApp\src\components\BlogPosts.tsx
+		ClientApp\src\components\Home.tsx = ClientApp\src\components\Home.tsx
+		ClientApp\src\components\Layout.tsx = ClientApp\src\components\Layout.tsx
+		ClientApp\src\components\NavMenu.css = ClientApp\src\components\NavMenu.css
+		ClientApp\src\components\NavMenu.tsx = ClientApp\src\components\NavMenu.tsx
+		ClientApp\src\components\Projects.tsx = ClientApp\src\components\Projects.tsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jest", "jest", "{9D9E85DF-5828-4F63-94C4-5F8F06A57E74}"
+	ProjectSection(SolutionItems) = preProject
+		ClientApp\config\jest\cssTransform.js = ClientApp\config\jest\cssTransform.js
+		ClientApp\config\jest\fileTransform.js = ClientApp\config\jest\fileTransform.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69FECDF2-D4CA-4948-B42D-62DDD6519324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FECDF2-D4CA-4948-B42D-62DDD6519324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FECDF2-D4CA-4948-B42D-62DDD6519324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FECDF2-D4CA-4948-B42D-62DDD6519324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCE0747-A0B3-47B3-B4F2-C4D7888A587B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCE0747-A0B3-47B3-B4F2-C4D7888A587B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCE0747-A0B3-47B3-B4F2-C4D7888A587B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCE0747-A0B3-47B3-B4F2-C4D7888A587B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C856117-A05D-455A-AD2D-AA82990A54AE} = {FE583AAD-8B1A-48E2-8E76-44590A277389}
+		{EFB53A79-BF11-4FA9-8A54-0B6018B98371} = {1C856117-A05D-455A-AD2D-AA82990A54AE}
+		{5AEA7259-70D8-4F44-ABD8-D2408F331C2E} = {EFB53A79-BF11-4FA9-8A54-0B6018B98371}
+		{E5DF3305-744D-4DF4-A590-BA47107C2E14} = {EFB53A79-BF11-4FA9-8A54-0B6018B98371}
+		{8D1C3926-7673-4749-B591-2F7EB5D0BBEA} = {FE583AAD-8B1A-48E2-8E76-44590A277389}
+		{FE1FE434-10E3-41B0-926C-801674896503} = {FE583AAD-8B1A-48E2-8E76-44590A277389}
+		{96E647C3-0B0D-4F5C-B6C2-7F3107D5ADFC} = {FE583AAD-8B1A-48E2-8E76-44590A277389}
+		{833A4F10-B294-453F-83FF-C42496076EC1} = {FE583AAD-8B1A-48E2-8E76-44590A277389}
+		{639D0FD2-93FA-40D3-BEC2-098B036659D4} = {FE1FE434-10E3-41B0-926C-801674896503}
+		{727CE733-5D2C-4871-BD4B-C55BD127C5F3} = {FE1FE434-10E3-41B0-926C-801674896503}
+		{9D9E85DF-5828-4F63-94C4-5F8F06A57E74} = {8D1C3926-7673-4749-B591-2F7EB5D0BBEA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0B6A31C-70AB-4589-80C2-B59AAA4E07D7}
+	EndGlobalSection
+EndGlobal

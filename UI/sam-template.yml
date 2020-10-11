@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: This is a lambda service that returns blog data
+Resources:
+  GetOptimiserFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: BlogReact::BlogReact.LambdaEntryPoint::FunctionHandlerAsync
+      Runtime: dotnetcore3.1
+      CodeUri: s3://serikm-blog-api/f088b22084fed6da7c856d742f842470
+      Timeout: 60
+      MemorySize: 3008
+      Environment:
+        Variables:
+          S3_BUCKET: serikm-blog-api
+      Events:
+        ProxyResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY

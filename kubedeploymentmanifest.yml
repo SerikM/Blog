@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mem-limit-range
+spec:
+  limits: #  size of the node (cores=4 RAM=14) or D2s_v3 (cores=2 RAM=8)
+  - default:
+      memory: 2Gi
+      cpu: 500m
+    defaultRequest:
+      memory: 900Mi
+      cpu: 210m
+    type: Container
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sitecore-containers-deployment
+  labels: 
+    app: sitecore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sitecore
+  template:
+    metadata:
+      name: sitecore
+      labels:
+        app: sitecore
+    spec:
+
+      nodeSelector:
+        beta.kubernetes.io/os: windows
+        beta.kubernetes.io/arch: amd64
+      containers:
+
+       #sql      
+      - name: sitecore-sqldev
+        image: 722522703510.dkr.ecr.ap-southeast-2.amazonaws.com/sitecore-xp-sqldev:9.3.0
+        env:
+        - name: SA_PASSWORD
+          value: 1812waR!M
+        - name: ACCEPT_EULA
+          value: "Y"
+        ports:
+        - containerPort: 1433
+
+        #solr
+      - name: sitecore-xp-solr
+        image: 722522703510.dkr.ecr.ap-southeast-2.amazonaws.com/sitecore-xp-solr:9.3.0
+        ports:
+        - containerPort: 80
+
+        #xconnect
+      - name: sitecore-xp-xconnect
+        image: 722522703510.dkr.ecr.ap-southeast-2.amazonaws.com/sitecore-xp-xconnect:9.3.0
+        ports:
+        - containerPort: 80
+
+        #cm
+      - name: sitecore
+        image: 722522703510.dkr.ecr.ap-southeast-2.amazonaws.com/sitecore-xp-spe-standalone:9.3.0
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sitecore-containers-service
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  selector:
+    app: sitecore
