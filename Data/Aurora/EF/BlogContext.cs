@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.Aurora.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Aurora.EF
 {
@@ -7,5 +8,14 @@ namespace Data.Aurora.EF
         public BlogContext(DbContextOptions<BlogContext> options)
           : base(options)
         { }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
+
+
+        DbSet<BlogPost> BLOG_POSTS { get; set; }
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Data.Aurora.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace Data.Aurora.Entities
 {
-    public class BlogPost
+    public class BlogPost : IEntityBase
     {
+        [Key]
+        public int Id { get; set; }
     }
 }
